@@ -5,7 +5,6 @@ import { Navigate } from "react-router-dom";
 const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 
 /***** Pages ****/
-
 const Starter = lazy(() => import("../views/Starter.js"));
 const About = lazy(() => import("../views/About.js"));
 const Alerts = lazy(() => import("../views/ui/Alerts"));
@@ -16,9 +15,9 @@ const Grid = lazy(() => import("../views/ui/Grid"));
 const Tables = lazy(() => import("../views/ui/Tables"));
 const Forms = lazy(() => import("../views/ui/Forms"));
 const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
+const Garajes = lazy(() => import("../components/dashboard/Garajes")); // Importa el componente Garajes
 
 /*****Routes******/
-
 const ThemeRoutes = [
   {
     path: "/",
@@ -35,6 +34,9 @@ const ThemeRoutes = [
       { path: "/table", exact: true, element: <Tables /> },
       { path: "/forms", exact: true, element: <Forms /> },
       { path: "/breadcrumbs", exact: true, element: <Breadcrumbs /> },
+
+      // Nuevas rutas
+      { path: "/garajes", exact: true, element: <Garajes /> }, 
     ],
   },
 ];

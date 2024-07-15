@@ -10,6 +10,11 @@ const navigation = [
     icon: "bi bi-speedometer2",
   },
   {
+    title: "Garajes", // Nuevo elemento de navegación
+    href: "/garajes",
+    icon: "bi bi-textarea-resize",
+  },
+  {
     title: "Alert",
     href: "/alerts",
     icon: "bi bi-bell",
@@ -44,16 +49,6 @@ const navigation = [
     href: "/forms",
     icon: "bi bi-textarea-resize",
   },
-  {
-    title: "Breadcrumbs",
-    href: "/breadcrumbs",
-    icon: "bi bi-link",
-  },
-  {
-    title: "About",
-    href: "/about",
-    icon: "bi bi-people",
-  },
 ];
 
 const Sidebar = () => {
@@ -81,6 +76,9 @@ const Sidebar = () => {
         </div>
         <div className="bg-dark text-white p-2 opacity-75">Steave Rojer</div>
       </div>
+
+
+     
       <div className="p-3 mt-2">
         <Nav vertical className="sidebarNav">
           {navigation.map((navi, index) => (
@@ -98,15 +96,6 @@ const Sidebar = () => {
               </Link>
             </NavItem>
           ))}
-          <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://wrappixel.com/templates/materialpro-react-admin/?ref=33"
-          >
-            Upgrade To Pro
-          </Button>
         </Nav>
       </div>
     </div>
