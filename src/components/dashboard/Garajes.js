@@ -58,8 +58,8 @@ const Garajes = () => {
       <Col lg="12">
         <Card>
           <CardTitle tag="h2" className="border-bottom p-3 mb-0">
-          LISTA DE GARAJES
-            </CardTitle>
+            LISTA DE GARAJES
+          </CardTitle>
           <CardBody>
             <Button className="btn" color="success" onClick={() => { setModalType('add'); setCurrentGaraje({ id: '', direccion: '', estado: '' }); toggleModal(); }}>
               Agregar
@@ -129,7 +129,7 @@ const Garajes = () => {
       <Modal isOpen={modal && modalType === 'delete'} toggle={toggleModal}>
         <ModalHeader toggle={toggleModal}>Confirmación</ModalHeader>
         <ModalBody>
-          ¿Estás seguro de que deseas eliminar el garaje con ID: {currentGaraje.id}?
+          ¿Estás seguro de que deseas eliminar el garaje con ID: {currentGaraje.direccion}?
         </ModalBody>
         <ModalFooter>
           <Button color="danger" onClick={() => { handleDelete(currentGaraje.id); toggleModal(); }}>Eliminar</Button>{' '}
